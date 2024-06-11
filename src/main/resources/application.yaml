@@ -1,0 +1,13 @@
+spring:
+  telegram:
+    client:
+      initialize: false
+      api-hash: <api-hash>
+      api-id: <app-id>
+      phone: <phone>
+      database-encryption-key: "ggg"
+      system-language-code: en
+      device-model: "SM-G973N"
+      database-directory: "C:/lib/windows_x64/sessions"
+  main:
+    allow-circular-references: true
