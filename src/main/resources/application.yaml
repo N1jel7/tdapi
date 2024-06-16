@@ -1,13 +1,29 @@
 spring:
   telegram:
     client:
-      initialize: false
-      api-hash: <api-hash>
-      api-id: <app-id>
-      phone: <phone>
-      database-encryption-key: "ggg"
-      system-language-code: en
-      device-model: "SM-G973N"
+      api-hash: "014b35b6184100b085b0d0572f9b5103"
+      api-id: 4
+      system-language-code: "en-US"
+      device-model: "Samsung Galaxy S23 FE"
       database-directory: "C:/lib/windows_x64/sessions"
+      use-file-database: true
+      database-encryption-key: ""
+      application-version: "0.26.9.1730-arm64-v8a"
+      system-version: "14 (34)"
   main:
     allow-circular-references: true
+  sms-services:
+    sms-man:
+      token: "kKe-sgnQR"
+      baseUrl: "http://api.sms-man.ru/control"
+      getBalance: "/get-balance?token={token}"
+      getLimits: "/limits?token={token}&country_id={country_id}&application_id={application_id}"
+      getNumber: "/get-number?token={token}&country_id={country_id}&application_id={application_id}"
+      getSms: "/get-sms?token={token}&request_id={request_id}"
+      getCountries: "/countries?token={token}"
+      getApplications: "/applications?token={token}"
+      setStatus: "/set-status?token={token}&request_id={request_id}&status={status}"
+logging:
+  level:
+    org.barossa.client: INFO
+    org.barossa: TRACE

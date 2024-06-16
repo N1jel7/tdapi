@@ -1,5 +1,10 @@
 package org.barossa.service;
 
+import org.barossa.handler.AuthorizationState;
+
 public interface TelegramService {
-    void login(String phone);
+    AuthorizationState login(String phone);
+
+    AuthorizationState enterAuthCode(String phone, String code);
+    void close(String phone);
 }
